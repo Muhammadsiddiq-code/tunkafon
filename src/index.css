@@ -355,45 +355,57 @@ img {
   overflow-wrap: anywhere;
 }
 
-.tunka-meta {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 0.75rem;
-  margin-top: 0.25rem;
-  flex-wrap: wrap;
-}
-
 .tunka-price {
   font-weight: 800;
-  font-size: 1rem;
+  font-size: 1.1rem;
 }
 
-.tunka-call {
+.tunka-actions {
+  display: flex;
+  gap: 0.6rem;
+  flex-wrap: wrap;
+  margin-top: 0.15rem;
+}
+
+.tunka-call,
+.tunka-order {
   display: inline-flex;
   align-items: center;
   justify-content: center;
   gap: 0.4rem;
-  padding: 0.55rem 0.95rem;
-  background: var(--accent);
-  color: var(--accent-contrast);
+  flex: 1 1 130px;
+  padding: 0.6rem 0.95rem;
   border-radius: var(--radius-sm);
   font-size: 0.85rem;
   font-weight: 700;
   text-decoration: none;
   white-space: nowrap;
-  transition: filter 0.2s ease, transform 0.1s ease;
+  transition: filter 0.2s ease, transform 0.1s ease, background-color 0.2s ease;
 }
 
-.tunka-call:hover {
-  filter: brightness(1.08);
+.tunka-call {
+  background: var(--accent);
+  color: var(--accent-contrast);
 }
 
-.tunka-call:active {
+.tunka-order {
+  background: var(--accent-soft);
+  color: var(--accent);
+  border: 1px solid color-mix(in srgb, var(--accent) 40%, var(--border));
+}
+
+.tunka-call:hover,
+.tunka-order:hover {
+  filter: brightness(1.06);
+}
+
+.tunka-call:active,
+.tunka-order:active {
   transform: scale(0.97);
 }
 
-.tunka-call__icon {
+.tunka-call__icon,
+.tunka-order__icon {
   width: 16px;
   height: 16px;
   flex-shrink: 0;
@@ -548,12 +560,13 @@ img {
     padding: 1rem 1rem 1.1rem;
   }
 
-  .tunka-meta {
+  .tunka-actions {
     gap: 0.6rem;
   }
 
-  .tunka-call {
-    padding: 0.6rem 1rem;
+  .tunka-actions a {
+    flex: 1 1 130px;
+    padding: 0.65rem 0.6rem;
   }
 
   .site-footer {
@@ -575,17 +588,17 @@ img {
     height: 20px;
   }
 
-  .tunka-meta {
-    flex-direction: column;
-    align-items: stretch;
-  }
-
   .tunka-price,
   .tunka-number {
     text-align: center;
   }
 
-  .tunka-call {
-    justify-content: center;
+  .tunka-actions {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .tunka-actions a {
+    flex: 1 1 auto;
   }
 }

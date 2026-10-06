@@ -16,30 +16,23 @@ const CURRENT_YEAR = new Date().getFullYear();
 export default function App() {
   const [theme, setTheme] = useLocalStorage(THEME_STORAGE_KEY, DEFAULT_THEME);
   const [lastViewed] = useLocalStorage(CART_STORAGE_KEY, null);
-  const [type, setType] = useState("all");
   const [query, setQuery] = useState("");
 
   useEffect(() => {
     document.documentElement.dataset.theme = theme;
   }, [theme]);
 
-  const types = useMemo(
-    () => ["all", ...new Set(tunkaItems.map((item) => item.type))],
-    []
-  );
-
   const visible = useMemo(() => {
     const q = query.trim().toLowerCase();
     return tunkaItems.filter((item) => {
-      const byType = type === "all" || item.type === type;
-      const byQuery =
+      return (
         !q ||
         item.name.toLowerCase().includes(q) ||
         item.type.toLowerCase().includes(q) ||
-        item.description.toLowerCase().includes(q);
-      return byType && byQuery;
+        item.description.toLowerCase().includes(q)
+      );
     });
-  }, [type, query]);
+  }, [query]);
 
   return (
     <div className="app">
@@ -60,7 +53,7 @@ export default function App() {
         <h1>Tunikabond va metall qoplama xizmatlari</h1>
         <p>
           Shift, fasad, tom va devor qoplamalari uchun mahsulot turlari. Narxni
-          ko'ring va bir tugma bilan ustaga qo'ng'iroq qiling.
+          ko'ring, qo'ng'iroq qiling yoki Telegram orqali zakaz bering.
         </p>
         {lastViewed && (
           <p className="hero-recent">

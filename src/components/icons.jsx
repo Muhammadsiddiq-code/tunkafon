@@ -63,3 +63,14 @@ export function LayeredIcon(props) {
     </svg>
   );
 }
+
+export function TelegramIcon(props) {
+  return (
+    <svg viewBox="0 0 24 24" {...props}>
+      <path
+        fill="currentColor"
+        d="M21.8 4.3 2.9 11.6c-1 .4-1 1.3 0 1.6l4.6 1.5 1.8 5.5c.2.6.5.7 1 .3l2.5-2.1 4.6 3.4c.7.4 1.3.2 1.5-.7l2.8-13.2c.3-1-.4-1.4-1.4-1zM9.3 14.8 17 9.1c.3-.2.6.1.4.4l-6.3 5.7-.2 2.6-1.6-3z"
+      />
+    </svg>
+  );
+}

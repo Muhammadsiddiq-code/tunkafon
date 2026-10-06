@@ -1,7 +1,12 @@
-import { PhoneIcon } from "./icons";
+import { PhoneIcon, TelegramIcon } from "./icons";
+import { TELEGRAM_URL } from "../config";
 
 export default function TunkaCard({ item }) {
   const telHref = `tel:${item.phone.replace(/[^\d+]/g, "")}`;
+  const orderMessage = encodeURIComponent(
+    `Assalomu alaykum! "${item.name}" (${item.type}) uchun zakaz bermoqchiman. Narxi: ${item.price}.`
+  );
+  const orderHref = `${TELEGRAM_URL}?text=${orderMessage}`;
 
   return (
     <article className="tunka-card">
@@ -19,8 +24,9 @@ export default function TunkaCard({ item }) {
         <h3 className="tunka-name">{item.name}</h3>
         <p className="tunka-desc">{item.description}</p>
 
-        <div className="tunka-meta">
-          <span className="tunka-price">{item.price}</span>
+        <span className="tunka-price">{item.price}</span>
+
+        <div className="tunka-actions">
           <a
             className="tunka-call"
             href={telHref}
@@ -29,7 +35,18 @@ export default function TunkaCard({ item }) {
             <PhoneIcon className="tunka-call__icon" />
             Telefon qilish
           </a>
+          <a
+            className="tunka-order"
+            href={orderHref}
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label={`${item.name} uchun Telegram orqali zakaz berish`}
+          >
+            <TelegramIcon className="tunka-order__icon" />
+            Zakaz berish
+          </a>
         </div>
+
         <span className="tunka-number">{item.phone}</span>
       </div>
     </article>

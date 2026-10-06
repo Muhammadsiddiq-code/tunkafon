@@ -6,7 +6,7 @@ export const tunkaItems = [
     description:
       "Ikki tomoni alyumin, o'rtasi polimer qatlamli tunikabond. Binoning tashqi qoplamasi uchun yengil va mustahkam.",
     price: "180 000 so'm / m²",
-    phone: "+998901234567",
+    phone: "+998 95 588 44 34",
     image: "/photos/acp-fasad.jpg",
   },
   {
@@ -26,7 +26,7 @@ export const tunkaItems = [
     description:
       "Kuchli gardishli profnastil. Tom va to'siq qoplamalari uchun korroziyaga chidamli tunuka mahsuloti.",
     price: "65 000 so'm / m²",
-    phone: "+998901234569",
+    phone: "+998 95 588 44 34",
     image: "/photos/profnastil.jpg",
   },
   {
@@ -36,7 +36,7 @@ export const tunkaItems = [
     description:
       "Uy va ombor devorlari uchun metall qoplama. Issiq va sovuqqa bardoshli, ranglari xilma-xil.",
     price: "78 000 so'm / m²",
-    phone: "+998901234570",
+    phone: "+998 95 588 44 34",
     image: "/photos/metall-siding.jpg",
   },
   {
@@ -46,7 +46,7 @@ export const tunkaItems = [
     description:
       "Kasetali panjara shift. Konditsioner va yoritish tizimlarini yashirish uchun qulay yechim.",
     price: "135 000 so'm / m²",
-    phone: "+998901234571",
+    phone: "+998 95 588 44 34",
     image: "/photos/grilyato.jpg",
   },
   {
@@ -56,7 +56,7 @@ export const tunkaItems = [
     description:
       "Buklangan qirrali metall kasseta. Shamollatiladigan fasad tizimlari uchun zamonaviy qoplama.",
     price: "155 000 so'm / m²",
-    phone: "+998901234572",
+    phone: "+998 95 588 44 34",
     image: "/photos/kasseta-panel.jpg",
   },
 ];
