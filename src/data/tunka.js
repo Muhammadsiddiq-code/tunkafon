@@ -16,7 +16,7 @@ export const tunkaItems = [
     description:
       "Cliq-in va lay-in turdagi metall shift panellari. Ofis, do'kon va koridor uchun tez o'rnatiladi.",
     price: "95 000 so'm / m²",
-    phone: "+998901234568",
+    phone: "+998 95 588 44 34",
     image: "/photos/metall-shift.jpg",
   },
   {
