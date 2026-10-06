@@ -49,7 +49,7 @@ export default function App() {
             <LayeredIcon className="brand-dot__icon" />
           </span>
           <div>
-            <strong>Tunikabond Ustalari</strong>
+            <strong>Tunkafon Ustalari</strong>
             <small>Metall shift va fasad qoplamalari</small>
           </div>
         </div>
@@ -107,7 +107,7 @@ export default function App() {
 
       <footer className="site-footer">
         <p>
-          © {CURRENT_YEAR} Tunikabond Ustalari. Narxlar taxminiy va m² hisobida.
+          © {CURRENT_YEAR} Tunkadon Ustalari. Narxlar taxminiy va m² hisobida.
         </p>
       </footer>
     </div>
